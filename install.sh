@@ -10,7 +10,7 @@ then
 fi
 
 # download
-if `git --version 2> /dev/null`
+if `git --version > /dev/null`
 then
     git clone git://github.com/aliva/SubtitleFixer.git
 else
@@ -35,9 +35,14 @@ fi
 ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer
 
 # add line to bashrc
-grep subtitlefixer ~/.bashrc
+grep subtitlefixer ~/.bashrc > /dev/null
+
 if [ $? == 1 ]
 then
     echo 'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
     echo 'alias SubtitleFixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
 fi
+
+echo "************************"
+echo "subtitlefixer installed!"
+echo "************************"
