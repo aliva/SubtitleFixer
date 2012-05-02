@@ -9,9 +9,12 @@ AUTHORS
 
 Install:
 
-Enter this line in terminal for auto install
+copy these lines in a terminal and press enter for auto install
 
-    wget https://github.com/aliva/SubtitleFixer/raw/master/install.sh -O subtitlefixer-install.sh && sh subtitlefixer-install.sh
+    wget https://github.com/aliva/SubtitleFixer/raw/master/install.sh \
+    -O subtitlefixer-install.sh \
+    && \
+    sh subtitlefixer-install.sh
 
 COPYING
     SubtitleFixer is distributed under the GPL Version 3.
