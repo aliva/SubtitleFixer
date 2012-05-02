@@ -1,15 +1,15 @@
-SubtitleFixer
-============
+# SubtitleFixer
 
-# Important
+## Important
 
-    This is a simple nautilus script for fixing Persian subtitles.
-    If you don't want to watch videos with Persian subtitles this script won't be usefull for you..
+This is a simple nautilus script for fixing Persian subtitles.
+If you don't want to watch videos with Persian subtitles this script won't be usefull for you..
 
-# AUTHORS
-    Ali Vakilzade
+## AUTHORS
 
-# Install:
+Ali Vakilzade
+
+## Install:
 
 copy these lines in a terminal and press enter for auto install
 
@@ -18,5 +18,6 @@ copy these lines in a terminal and press enter for auto install
     && \
     sh subtitlefixer-install.sh
 
-# COPYING
-    SubtitleFixer is distributed under the GPL Version 3.
+## COPYING
+
+SubtitleFixer is distributed under the GPL Version 3.
