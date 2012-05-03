@@ -150,7 +150,6 @@ class UiGtk:
         os.remove(self.files[0])
         with open(self.files[0], 'w') as f:
             f.write(lines.encode('utf-8'))
-        os.chmod(self.files[0], 0755)
 
         self.read_next_file()
 
