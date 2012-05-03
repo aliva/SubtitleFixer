@@ -9,7 +9,7 @@ If you don't want to watch videos with Persian subtitles this script won't be us
 
 Ali Vakilzade
 
-## Install:
+## Install
 
 copy these lines in a terminal and press enter for auto install
 
@@ -17,6 +17,13 @@ copy these lines in a terminal and press enter for auto install
     -O subtitlefixer-install.sh \
     && \
     sh subtitlefixer-install.sh
+
+## Usage
+
+1. right click on srt files in nautilus and select scripts->SubtitleFixer
+2. in terminal call subtitlefixer script
+
+    SubtitleFixer file.srt
 
 ## COPYING
 
