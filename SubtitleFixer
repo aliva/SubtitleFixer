@@ -110,7 +110,7 @@ class UiGtk:
         self.window.set_title('SubtitleFixer (%s)' % self.files[0])
 
         self.skipped = False
-        if os.path.splitext(self.files[0][1]) != '.srt':
+        if self.files[0][-4:] != '.srt':
             self.skipped = True
 
         if self.skipped:
