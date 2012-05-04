@@ -1,7 +1,6 @@
 #!/usr/bin/python2
 # -*- coding: utf-8 -*-
 
-import mimetypes
 import os
 import re
 import sys
@@ -112,9 +111,7 @@ class UiGtk:
 
         self.skipped = False
         if os.path.splitext(self.files[0][1]) != '.srt':
-            mime = mimetypes.guess_type(self.files[0])
-            if mime != (None, None):
-                self.skipped = True
+            self.skipped = True
 
         if self.skipped:
             lines = not_changing_message % self.files[0]
