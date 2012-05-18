@@ -1,5 +1,7 @@
 # SubtitleFixer
 
+[User Guide](http://aliva.ir/projects/subtitle-fixer-fa)
+
 ## Important
 
 This is a simple nautilus script for fixing Persian subtitles.
