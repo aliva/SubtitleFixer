@@ -40,7 +40,6 @@ grep subtitlefixer ~/.bashrc > /dev/null
 if [ $? == 1 ]
 then
     echo 'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
-    echo 'alias SubtitleFixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
 fi
 
 echo "************************"
