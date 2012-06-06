@@ -7,7 +7,7 @@ If you don't want to watch videos with Persian subtitles this script won't be us
 
 ## User Guide
 
-There is a user document in persian [here](http://aliva.ir/projects/subtitle-fixer-fa)
+There is a user document in persian [here](http://www.aliva.ir/wiki/doku.php?id=projects:subtitlefixer)
 
 ## AUTHORS
 
