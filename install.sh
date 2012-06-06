@@ -1,5 +1,13 @@
 #!/bin/bash
 
+warn() {
+    echo "$1" >&2
+}
+die() {
+    warn "$1"
+    exit 1
+}
+
 # go to install dirctories
 mkdir -p ~/.gnome2/nautilus-scripts
 mkdir -p ~/.local/bin
@@ -16,10 +24,8 @@ if `git --version > /dev/null`
 then
     git clone git://github.com/aliva/SubtitleFixer.git
 else
-    rm -Rf aliva-SubtitleFixer-*
-    wget https://github.com/aliva/SubtitleFixer/tarball/master -O SubtitleFixer.tar.gz
-    tar -xf SubtitleFixer.tar.gz
-    mv aliva-SubtitleFixer-* SubtitleFixer
+    warn "You need 'git' to install subtitlefixer."
+    die  "install 'git' on your system and run install script again."
 fi
 
 # removes old version from nautilus-scripts
