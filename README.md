@@ -21,8 +21,8 @@ copy these lines in a terminal and press enter for auto install
 
     wget https://github.com/aliva/SubtitleFixer/raw/master/install.sh \
     -O subtitlefixer-install.sh \
-    && \
-    sh subtitlefixer-install.sh
+    && chmod +x+u subtitlefixer-install.sh \
+    && ./subtitlefixer-install.sh
 
 ### Usage
 

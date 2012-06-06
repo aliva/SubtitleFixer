@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # go to install dirctories
 mkdir -p ~/.gnome2/nautilus-scripts
 mkdir -p ~/.local/bin
