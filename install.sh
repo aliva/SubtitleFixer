@@ -41,6 +41,7 @@ fi
 
 # install in nautilus-scripts
 ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer
+echo "ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer"
 
 # add line to bashrc
 grep subtitlefixer ~/.bashrc &> /dev/null
@@ -48,6 +49,7 @@ grep subtitlefixer ~/.bashrc &> /dev/null
 if [ $? == 1 ]
 then
     echo 'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
+    echo "'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc"
 fi
 
 echo "************************"
