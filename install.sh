@@ -20,7 +20,7 @@ then
 fi
 
 # download
-if `git --version > /dev/null`
+if `git --version &> /dev/null`
 then
     git clone git://github.com/aliva/SubtitleFixer.git
 else
@@ -43,7 +43,7 @@ fi
 ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer
 
 # add line to bashrc
-grep subtitlefixer ~/.bashrc > /dev/null
+grep subtitlefixer ~/.bashrc &> /dev/null
 
 if [ $? == 1 ]
 then
