@@ -1,0 +1,17 @@
+Section: misc
+Priority: optional
+Homepage: https://github.com/aliva/SubtitleFixer
+Standards-Version: 3.9.2
+
+Package: subtitlefixer
+Version: 1.0
+Maintainer: Ali Vakilzade <ali.vakilzade@gmail.com>
+Depends: python-nautilus
+Architecture: all
+# Copyright: <copyright file; defaults to GPL2>
+# Changelog: <changelog file; defaults to a generic changelog>
+Readme: README.md
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+Files:  subtitlefixer /usr/bin/
+        nautilus-subtitlefixer.py /usr/share/nautilus-python/extensions/
+Description: This is a simple nautilus script for fixing Persian subtitles. If you do not want to watch videos with Persian subtitles this script will not be useful for you.
