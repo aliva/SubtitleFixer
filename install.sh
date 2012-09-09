@@ -8,10 +8,7 @@ die() {
     exit 1
 }
 
-# go to install dirctories
-mkdir -p ~/.gnome2/nautilus-scripts
-mkdir -p ~/.local/bin
-cd ~/.local/bin
+cd /tmp
 
 # remove old version
 if [ -d SubtitleFixer ]
@@ -22,35 +19,15 @@ fi
 # download
 if `git --version &> /dev/null`
 then
-    git clone git://github.com/aliva/SubtitleFixer.git
+    git clone git://github.com/aliva/SubtitleFixer.git || die "Coudn't download script. check your intenet connection and retry."
 else
     warn "You need 'git' to install subtitlefixer."
     die  "install 'git' on your system and run install script again."
 fi
 
-# removes old version from nautilus-scripts
-if [ -d ~/.gnome2/nautilus-scripts/SubtitleFixer ]
-then
-    rm -Rf ~/.gnome2/nautilus-scripts/SubtitleFixer
-fi
-
-if [ -f ~/.gnome2/nautilus-scripts/SubtitleFixer ]
-then
-    rm -Rf ~/.gnome2/nautilus-scripts/SubtitleFixer
-fi
-
-# install in nautilus-scripts
-ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer
-echo "ln -s ~/.local/bin/SubtitleFixer/SubtitleFixer ~/.gnome2/nautilus-scripts/SubtitleFixer"
-
-# add line to bashrc
-grep subtitlefixer ~/.bashrc &> /dev/null
-
-if [ $? == 1 ]
-then
-    echo 'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc
-    echo "'alias subtitlefixer=~/.local/bin/SubtitleFixer/SubtitleFixer' >> ~/.bashrc"
-fi
+cd SubtitleFixer
+cp subtitlefixer /usr/bin
+cp nautilus-subtitlefixer.py /usr/share/nautilus-python/extensions
 
 echo "************************"
 echo "subtitlefixer installed!"
