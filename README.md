@@ -34,10 +34,15 @@ Copy these lines in a terminal and press enter for auto install.
 
 ### Usage
 
-1. right click on srt files in nautilus and select scripts->SubtitleFixer
-2. in terminal call subtitlefixer script
+#### Terminal
 
-    SubtitleFixer file.srt
+    subtitlefixer file.srt
+
+#### Nautilus
+
+Right click on srt files in nautilus and select "اصلاح زیرنویس پارسی"
+
+(This Options is only available for 'srt' files)
 
 ## COPYING
 
