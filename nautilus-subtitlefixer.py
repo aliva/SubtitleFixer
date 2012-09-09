@@ -22,7 +22,7 @@ class NautilusSubtitleFixer(GObject.GObject, Nautilus.MenuProvider):
         menuitem = Nautilus.MenuItem(name='NautilusSubtitleFixer::SubtitleFixer',
                 label='اصلاح زیرنویس پارسی',
                 tip='اصلاح زیرنویس پارسی',
-                icon='gtk-refresh')
+                icon='gtk-edit')
         menuitem.connect('activate', self.on_menuitem_activated, files)
 
         return menuitem,
