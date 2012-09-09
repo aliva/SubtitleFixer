@@ -19,14 +19,13 @@ Ali Vakilzade
 
 #### deb package
 
-    download the latest deb package from [download page](https://github.com/aliva/SubtitleFixer/downloads)
-    install with dpkg
+Download the latest deb package from [download page](https://github.com/aliva/SubtitleFixer/downloads) then install with dpkg
 
     dpkg -i subtitlefixer_xx.yy.deb
 
 #### Other
 
-copy these lines in a terminal and press enter for auto install.
+Copy these lines in a terminal and press enter for auto install.
 
     su -c 'wget https://github.com/aliva/SubtitleFixer/raw/master/install.sh \
     -O subtitlefixer-install.sh \
