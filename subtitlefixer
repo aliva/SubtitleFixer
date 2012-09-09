@@ -48,6 +48,7 @@ class UiGtk:
         # setup main window
         self.window.resize(400, 400)
         self.window.set_border_width(5);
+        self.window.set_icon_name('gtk-refresh')
         self.window.connect('destroy', Gtk.main_quit)
         self.window.connect('delete_event', Gtk.main_quit)
 
