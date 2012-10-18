@@ -4,7 +4,7 @@ Homepage: https://github.com/aliva/SubtitleFixer
 Standards-Version: 3.9.2
 
 Package: subtitlefixer
-Version: 1.0
+Version: 1.1
 Maintainer: Ali Vakilzade <ali.vakilzade@gmail.com>
 Depends: python-nautilus
 Architecture: all
