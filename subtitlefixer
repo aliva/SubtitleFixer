@@ -151,17 +151,27 @@ class SubtitleFixer:
 
         self.string = ''
 
-    def is_utf8(self):
+    def fix_encoding(self):
         assert isinstance(self.string, str), repr(self.string)
-        if isinstance(self.string, unicode):
-            return True
+        #if isinstance(self.string, unicode):
+            #return 'utf8'
 
         try:
             self.string.decode('utf8', 'strict')
+            self.string = self.string.decode('utf8')
+            return 'utf8'
         except UnicodeError:
-            return True
+            pass
 
-        return False
+        try:
+            self.string.decode('utf16', 'strict')
+            self.string = self.string.decode('utf16')
+            return 'utf16'
+        except UnicodeError:
+            pass
+
+        self.string = self.string.decode('windows-1256')
+        return 'windows-1256'
 
     def fix_italic(self):
         self.string = self.string.replace('<i>' , '')
@@ -223,10 +233,7 @@ class SubtitleFixer:
     def decode_string(self, string):
         self.string = string
 
-        if self.is_utf8():
-            self.string = self.string.decode('windows-1256')
-        else:
-            self.string = self.string.decode('utf-8')
+        self.fix_encoding()
 
         self.fix_italic()
         self.fix_arabic()
